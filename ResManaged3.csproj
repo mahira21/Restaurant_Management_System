@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4025A8D9-FDE4-46A1-8A7E-21C73B624C6D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ResManaged3</RootNamespace>
+    <AssemblyName>ResManaged3</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.ComponentModel.Annotations.4.4.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Common, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.Common.4.3.0\lib\net451\System.Data.Common.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SqlClient, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SqlClient.4.3.0\lib\net46\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App\AuthApp.cs" />
+    <Compile Include="App\CheckOutApp.cs" />
+    <Compile Include="App\CartItemApp.cs" />
+    <Compile Include="App\ItemClass.cs" />
+    <Compile Include="App\MenuAllItemsApp.cs" />
+    <Compile Include="App\ModelOrderApp.cs" />
+    <Compile Include="App\NotiApp.cs" />
+    <Compile Include="App\OrderPaletteApp.cs" />
+    <Compile Include="App\OrderApp.cs" />
+    <Compile Include="App\PersonalInfoApp.cs" />
+    <Compile Include="App\RegApp.cs" />
+    <Compile Include="App\User.cs" />
+    <Compile Include="Data\AuthData.cs" />
+    <Compile Include="Data\ItemData.cs" />
+    <Compile Include="Data\NotiData.cs" />
+    <Compile Include="Data\Order.cs" />
+    <Compile Include="Data\RegData.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Containers\ModifyItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Containers\ModifyItem.Designer.cs">
+      <DependentUpon>ModifyItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Containers\AddItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Containers\AddItem.Designer.cs">
+      <DependentUpon>AddItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Containers\CheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Containers\CheckOut.Designer.cs">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Containers\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Containers\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Containers\MenuAllItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Containers\MenuAllItems.Designer.cs">
+      <DependentUpon>MenuAllItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Containers\DeliverySettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Containers\DeliverySettings.Designer.cs">
+      <DependentUpon>DeliverySettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Containers\TakenOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Containers\TakenOrders.Designer.cs">
+      <DependentUpon>TakenOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Containers\ShowAllItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Containers\ShowAllItem.Designer.cs">
+      <DependentUpon>ShowAllItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Containers\PendingOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Containers\PendingOrders.Designer.cs">
+      <DependentUpon>PendingOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Containers\PersonalInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Containers\PersonalInfo.Designer.cs">
+      <DependentUpon>PersonalInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Containers\RegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Containers\RegistrationForm.Designer.cs">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Containers\AllOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Containers\AllOrders.Designer.cs">
+      <DependentUpon>AllOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Containers\TrackOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Containers\TrackOrder.Designer.cs">
+      <DependentUpon>TrackOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CustomControls\SpecGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\CustomControls\TransTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Elements\CartItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Elements\CartItem.Designer.cs">
+      <DependentUpon>CartItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Elements\Item.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Elements\Item.Designer.cs">
+      <DependentUpon>Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Elements\OrderPalette2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Elements\OrderPalette2.Designer.cs">
+      <DependentUpon>OrderPalette2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Elements\OrderStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Elements\OrderStatus.Designer.cs">
+      <DependentUpon>OrderStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Landing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Landing.Designer.cs">
+      <DependentUpon>Landing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserEnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UserEnd.Designer.cs">
+      <DependentUpon>UserEnd.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\Containers\ModifyItem.resx">
+      <DependentUpon>ModifyItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Containers\AddItem.resx">
+      <DependentUpon>AddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Containers\CheckOut.resx">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Containers\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Containers\MenuAllItems.resx">
+      <DependentUpon>MenuAllItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Containers\DeliverySettings.resx">
+      <DependentUpon>DeliverySettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Containers\TakenOrders.resx">
+      <DependentUpon>TakenOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Containers\ShowAllItem.resx">
+      <DependentUpon>ShowAllItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Containers\PendingOrders.resx">
+      <DependentUpon>PendingOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Containers\PersonalInfo.resx">
+      <DependentUpon>PersonalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Containers\RegistrationForm.resx">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Containers\AllOrders.resx">
+      <DependentUpon>AllOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Containers\TrackOrder.resx">
+      <DependentUpon>TrackOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Elements\CartItem.resx">
+      <DependentUpon>CartItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Elements\Item.resx">
+      <DependentUpon>Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Elements\OrderPalette2.resx">
+      <DependentUpon>OrderPalette2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Elements\OrderStatus.resx">
+      <DependentUpon>OrderStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Landing.resx">
+      <DependentUpon>Landing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserEnd.resx">
+      <DependentUpon>UserEnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\ResM.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\ResM_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>ResM.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\Untitled-5png.png" />
+    <None Include="Resources\2203538-24.png" />
+    <Content Include="UI\Resources\cart.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
